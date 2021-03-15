@@ -1,0 +1,46 @@
+{
+	"name": "icon-example",
+	"displayName": "icon-example",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"activationEvents": [
+		"onView:iconExample"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "iconExample",
+					"title": "Icon Example",
+					"icon": "media/dep.svg"
+				}
+			]
+		},
+		"views": {
+			"iconExample": [
+				{
+					"name": "Icon Example",
+					"id": "iconExample",
+					"icon": "media/dep.svg"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.48.0",
+		"@typescript-eslint/eslint-plugin": "^4.16.0",
+		"@typescript-eslint/parser": "^4.16.0",
+		"eslint": "^7.21.0",
+		"typescript": "^4.2.2"
+	}
+}
